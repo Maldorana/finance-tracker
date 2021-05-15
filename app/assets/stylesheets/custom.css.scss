@@ -9,3 +9,20 @@
     padding-top: 0rem;
     padding-bottom: 0rem;
 }
+
+.no-left-padding {
+    padding-left: 0 !important;
+} 
+
+.btn.btn-primary > .fa.fa-search {
+    font-size: 1.4rem;
+    padding: 0.35rem;
+}
+
+.btn-primary:focus {
+    box-shadow: none;
+}
+
+#stock {
+    box-shadow: none;
+}
