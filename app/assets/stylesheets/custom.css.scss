@@ -1,1 +1,11 @@
 @import 'bootstrap/dist/css/bootstrap';
+
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.navbar > .container {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
