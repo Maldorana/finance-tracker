@@ -30,3 +30,13 @@
 .results-block {
     display: inline-block;
 }
+
+.container > .container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.container.main-container {
+    padding-right: var(--bs-gutter-x, 1.2rem);
+    padding-left: var(--bs-gutter-x, 1.2rem);
+}
