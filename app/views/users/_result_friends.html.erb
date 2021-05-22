@@ -12,7 +12,14 @@
                     <td><strong>Email: </strong> <%= friend.email %></td>
                     <td><strong>Number of stocks: </strong> <%= friend.stocks.count %></td>
                     <td><strong>Actions: </strong> <%= link_to 'View profile', '#', class:"btn btn-sm btn-outline-primary" %>
-                    <%= link_to 'Follow friend', '#', class: "btn btn-sm btn-primary", method: :post %></td>
+                    <% if current_user.not_friends_with?(friend.id) %>
+                        <%= link_to 'Follow friend', friendships_path(friend: friend), class: "btn btn-sm btn-primary", method: :post %>
+                    <% else %>
+                        <span class="badge bg-secondary">
+                            Already friend
+                        </span>
+                    <% end %>
+                    </td>
                 </tr>
             <% end %>
         </tbody>
