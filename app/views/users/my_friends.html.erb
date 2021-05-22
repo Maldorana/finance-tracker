@@ -1,3 +1,21 @@
+<div class='mt-5'>
+  <h3 class="mb-3">Search friends</h3>
+  <%= form_tag search_friend_path, remote: true, method: :get do %>
+    <div class="form-group row">
+      <div class="col-sm-9">
+        <%= text_field_tag :friend, params[:friend], placeholder: "Type in friend username", class: "form-control form-control-lg" %>
+      </div>
+      <div class="col-sm-3 no-left-padding">
+        <%= button_tag type: :submit, class: "btn btn-primary" do %>
+          <%= fa_icon 'search' %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div> 
+<div id="result_friends">
+</div>
+
 <% if !@friends.empty? %>
     <%= render 'list_friends' %>
 <% end %>

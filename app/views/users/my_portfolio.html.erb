@@ -5,7 +5,7 @@
   <%= form_tag search_stock_path, remote: true, method: :get do %>
     <div class="form-group row">
       <div class="col-sm-9">
-        <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", class: "form-control form-control-lg" %>
+        <%= text_field_tag :stock, params[:stock], placeholder: "Type in stock ticker symbol", class: "form-control form-control-lg" %>
       </div>
       <div class="col-sm-3 no-left-padding">
         <%= button_tag type: :submit, class: "btn btn-primary" do %>
@@ -15,7 +15,7 @@
     </div>
   <% end %>
 </div> 
-<div id="results">
+<div id="result_stocks">
 </div>
 
 <% if !@tracked_stocks.empty? %>
