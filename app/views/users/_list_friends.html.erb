@@ -1,0 +1,25 @@
+<div class="row mt-4">
+    <div class="col-9">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Number of stocks tracked</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @friends.each do |friend| %>
+                <tr>
+                  <th scope="row"><%= friend.username %></th>
+                  <td><%= friend.email %></td>
+                  <td><%= friend.stocks.count %></td>
+                  <td class="text-center"><%= link_to 'stop following', '#', method: :delete, data: {confirm: 'Are you sure?'},
+                                                class: "btn btn-sm btn-outline-danger" %></td>
+                </tr>
+                <% end %>
+          </tbody>
+        </table>
+    </div>
+</div>
